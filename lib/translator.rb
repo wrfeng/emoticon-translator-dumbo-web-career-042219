@@ -1,6 +1,7 @@
 require "yaml"
 
 def load_library(string)
+  hash = {}
   library = YAML.load_file(string)
 end
 
