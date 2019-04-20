@@ -4,8 +4,8 @@ def load_library(string)
   hash = {}
   library = YAML.load_file(string)
   
-  library.each do |key, val|
-    
+  library.each do |meaning, array|
+    array.each
   end
 end
 
