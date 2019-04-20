@@ -5,7 +5,8 @@ def load_library(string)
   library = YAML.load_file(string)
   
   library.each do |meaning, array|
-    hash[get_meaning] = {
+    hash[get_meaning] = {array[1] => meaning}
+    hash[get_emoticon] = {array
   end
 end
 
