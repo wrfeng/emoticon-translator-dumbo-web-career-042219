@@ -15,7 +15,7 @@ end
 def get_japanese_emoticon(string, emoticon)
   library = load_library(string)
   
-  if library["get_emoticon"][emoticon]
+  unless library["get_emoticon"][emoticon].nil?
     library["get_emoticon"][emoticon]
   else
     puts "Sorry, that emoticon was not found"
