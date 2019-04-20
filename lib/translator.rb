@@ -1,12 +1,12 @@
 require "yaml"
 
 def load_library(string)
-  hash = {}
+  hash = {"get_meaning" => {}, "get_emoticon" => {}}
   library = YAML.load_file(string)
   
   library.each do |meaning, array|
-    hash["get_meaning"] = {array[1] => meaning}
-    hash["get_emoticon"] = {array[0] => array[1]}
+    hash["get_meaning"][array[1]] = meaning
+    hash["get_emoticon"][array[0]] = array[1]
   end
   
   hash
